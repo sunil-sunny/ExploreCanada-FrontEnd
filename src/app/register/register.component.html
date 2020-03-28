@@ -1,0 +1,96 @@
+<div class="col-xl-4">
+  <form #UserRegistartionForm="ngForm" (ngSubmit)="onSubmit(UserRegistartionForm)">
+    <fieldset>
+      <div id="legend">
+        <legend class="">Register</legend>
+      </div>
+      <div class="form-group">
+
+        <label for="firstname">First name</label>
+        <div class="controls">
+          <input type="text" name="firstName"  placeholder="firstname" #firstName="ngModel" [(ngModel)]="userdetails.firstName" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <!-- last name -->
+        <label for="lastname">Last name</label>
+        <div class="controls">
+          <input type="text" name="lastName" placeholder="lastname" #lastName="ngModel" [(ngModel)]="userdetails.lastName" class="form-control">
+        </div>
+      </div>
+      <div class="form-group">
+        <!-- DOB -->
+        <label for="dob">Date of Birth</label>
+        <div class="controls">
+          <input type="date" name="dateOfBirth" class="form-control" #dateOfBirth="ngModel" [(ngModel)]="userdetails.dateOfBirth">
+
+        </div>
+      </div>
+      <div class="form-group">
+        <!-- address -->
+        <label for="address">Address</label>
+        <div class="controls">
+          <input type="text" name="address" placeholder="" class="form-control" #address="ngModel" [ngModel]="userdetails.dateOfBirth">
+        </div>
+      </div>
+     <!--  <div class="form-group">
+        <label for="province">Province</label>
+        <div class="controls">
+          <input type="text" id="province" placeholder="" class="form-control" #province="ngModel" [ngModel]="userdetails.province">
+        </div>
+      </div> -->
+      <div class="form-group">
+        <!-- postal code -->
+        <label for="postcode">Postal Code</label>
+        <div class="controls">
+          <input type="text" name="pinCode"class="form-control" #pinCode="ngModel" [ngModel]="userdetails.pinCode">
+        </div>
+      </div>
+      <div class="form-group">
+        <!-- country -->
+        <label for="country">Country</label>
+        <div class="controls">
+          <input type="text" name="country" placeholder="" class="form-control" #country="ngModel" [(ngModel)]="userdetails.country">
+        </div>
+      </div>
+      <div class="form-group">
+        <!-- Mobile number -->
+        <label for="mobile">Mobile Number</label>
+        <div class="controls">
+          <input type="number" name="mobileNumber" placeholder="" class="form-control" #mobileNumber="ngModel" [(ngModel)]="userdetails.mobileNumber">
+        </div>
+      </div>
+      <div class="form-group">
+        <!-- E-mail -->
+        <label for="email">E-mail</label>
+        <div class="controls">
+          <input type="text" name="userId" placeholder="" class="form-control" #userId="ngModel" [(ngModel)]="userdetails.userId">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <!-- Password-->
+        <label for="password">Password</label>
+        <div class="controls">
+          <input type="password" name="password" placeholder="" class="form-control"
+          #password="ngModel" [(ngModel)]="userdetails.password">
+        </div>
+      </div>
+      <div class="form-group">
+        <!-- security -->
+        <label for="securityAnswer">Enter your place of birth</label>
+        <div class="controls">
+          <input type="text" name="securityAnswer" placeholder="" class="form-control"
+          #securityAnswer="ngModel" [(ngModel)]="userdetails.securityAnswer">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <!-- Button -->
+        <div class="controls">
+          <button class="btn btn-success" type="submit">Register</button>
+        </div>
+      </div>
+   </fieldset>
+  </form>
+</div>

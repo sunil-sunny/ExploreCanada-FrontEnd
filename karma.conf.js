@@ -1,6 +1,9 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/1.0/config/configuration-file.html
-
+app.use(function(req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', req.header('origin') || "*");
+  next();
+});
 module.exports = function (config) {
   config.set({
     basePath: '',

@@ -1,0 +1,55 @@
+<div class="col-xl-4">
+  <form #bookingForm='ngForm' (ngSubmit)="onSubmit(fromPlace.value,toPlace.value,journeyDate.value)">
+    <fieldset>
+      <div id="legend">
+        <legend class="">Bus Booking</legend>
+      </div>
+      <div class="form-group">
+        <label for="source">Source</label>
+        <div class="controls">
+          <select class="form-control" #fromPlace ngModel name="fromPlace">
+            <option value="Halifax">Halifax</option>
+            <option value="Montreal">Montreal</option>
+            <option value="Toronto">Toronto</option>
+            <option value="Ottawa">Ottawa</option>
+            <option value="Vancouver">Vancouver</option>
+            <option value="Capre Breton">Cape Breton</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+
+        <label for="destination">Destination</label>
+        <div class="controls">
+          <select class="form-control" #toPlace ngModel name="toPlace">
+            <option value="Halifax">Halifax</option>
+            <option value="Montreal">Montreal</option>
+            <option value="Toronto">Toronto</option>
+            <option value="Ottawa">Ottawa</option>
+            <option value="Vancouver">Vancouver</option>
+            <option value="Capre Breton">Cape Breton</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+
+        <label for="traveldate">Booking Date</label>
+        <div class="controls">
+          <input type="date" name="journeyDate" #journeyDate ngModel class="form-control">
+
+        </div>
+      </div>
+      <div class="form-group">
+
+        <label for="traveldate">Cost: CAD$ 659</label>
+
+      </div>
+      <div class="form-group">
+        <!-- Button -->
+        <div class="controls">
+          <button class="btn btn-success" type="submit">Book</button>
+        </div>
+      </div>
+   </fieldset>
+  </form>
+</div>
